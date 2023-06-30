@@ -76,7 +76,7 @@ public class OrderHelper {
 
     public static void checkOrderResponse(int trackId, Order order) {
         getOrder(trackId)
-                .then().statusCode(200)
+                .then().statusCode(HTTP_OK)
                 .and()
                 .body("order.firstName", equalTo(order.getFirstName()))
                 .body("order.lastName", equalTo(order.getLastName()))

@@ -25,10 +25,6 @@ public class CourierCreateTest extends BaseTest {
         courier = randomCourier();
         Response response = sendPostRequest(courier, COURIER_PATH);
         checkCourierIsCreated(response);
-
-        //Удаление созданного курьера
-        courier = new Courier(courier.getLogin(), courier.getPassword());
-        deleteCourier(courier);
     }
 
     @Test
